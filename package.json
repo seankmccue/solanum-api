@@ -1,0 +1,28 @@
+{
+  "name": "wi25-hack-team-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && node server.js",
+    "client": "cd frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acmucsd-projects/wi25-hack-team-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acmucsd-projects/wi25-hack-team-2/issues"
+  },
+  "homepage": "https://github.com/acmucsd-projects/wi25-hack-team-2#readme",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+  "node": "18.x"
+  }
+}
