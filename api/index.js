@@ -2,9 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const serverless = require("serverless-http");
+// const serverless = require("serverless-http");
+const PORT = process.env.PORT || 5000;
 
 const app = express();
+
+app.listen(PORT, () => {
+  console.log(`✅ Backend is running on port ${PORT}`);
+});
+
 app.use(cors());
 
 const gardenSchema = new mongoose.Schema({
@@ -38,4 +44,4 @@ app.get("/api/garden", async (req, res) => {
   }
 });
 
-module.exports = serverless(app);
+// module.exports = serverless(app);
